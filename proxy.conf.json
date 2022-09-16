@@ -1,0 +1,6 @@
+{
+  "/api": {
+    "target": "https://feeds.feedburner.com/ndtvnews-top-stories",
+    "secure": false
+  }
+}

@@ -1,0 +1,32 @@
+img{
+    border-radius: 5px;
+}
+
+.wallHeader{
+    position: sticky;
+    margin: 0px;
+    top: 56px;
+    background-color: whitesmoke;
+    @media screen and (min-width: 992px)
+    {
+        top: 65px;
+    }
+}
+
+.posts{
+    position: sticky;
+}
+
+.btn-outline-info{
+    --bs-btn-hover-color: #fff !important;
+}
+
+.onlyImg{
+    object-fit: contain;
+    object-position: center;
+    height: 280px;
+}
+
+// .fade{
+//     z-index: 9999;
+// }

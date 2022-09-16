@@ -1,0 +1,25 @@
+<div class="row m-3 d-flex justify-content-center">
+  <div class="card m-3 my-5" style="width: 35rem" (click)="toggleComponent()">
+    <div class="card-body px-5">
+      <h5 class="card-title d-flex justify-content-center">News</h5>
+      <!-- <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6> -->
+      <p class="card-text d-flex justify-content-center">
+        Select this card to See the latest News.
+      </p>
+    </div>
+  </div>
+  <div class="card m-3 my-5" style="width: 35rem" (click)="toggleComponent()">
+    <div class="card-body px-5">
+      <h5 class="card-title d-flex justify-content-center">Converter</h5>
+      <!-- <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6> -->
+      <p class="card-text d-flex justify-content-center">
+        Select this card to conver number to string.
+      </p>
+    </div>
+  </div>
+</div>
+<hr />
+<router-outlet>
+  <app-home *ngIf="news"></app-home>
+  <app-converter *ngIf="comp"></app-converter>
+</router-outlet>

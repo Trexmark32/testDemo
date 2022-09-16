@@ -1,0 +1,36 @@
+<div class="container">
+  <div>
+    <h1 class="col d-flex justify-content-center">
+      Enter the number to convert
+    </h1>
+    <br />
+    <div class="d-flex justify-content-around mx-5">
+      <div class="align-self-center">
+        <input
+          mat-input
+          type="number"
+          id="mynumber"
+          name="mynumber"
+          [(ngModel)]="mynumber"
+          onKeyPress="if(this.value.length==5) return false;"
+        />
+      </div>
+      <!-- <p class="">
+       
+      </p> -->
+      <div class="">
+        <button
+          type="button"
+          class="btn btn-outline-success"
+          (click)="convertToWord()"
+        >
+          Convert to String
+        </button>
+      </div>
+    </div>
+
+    <div class="d-flex justify-content-start mt-3">
+      <h1>{{ outputWords }}</h1>
+    </div>
+  </div>
+</div>

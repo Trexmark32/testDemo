@@ -1,0 +1,81 @@
+<div class="album pb-5 bg-light posts">
+  <div class="container">
+    <div class="row">
+      <div
+        class="col-xs-12 col-sm-12 col-md-6 col-lg-4 p-3"
+        *ngFor="let item of showArr; let i = index"
+      >
+        <div
+          (click)="view(i)"
+          type="button"
+          class="card card-deck"
+          data-bs-toggle="modal"
+          data-bs-target="#staticBackdrop"
+        >
+          <div class="card-body">
+            <h5 class="card-title">{{ i + 1 }}. {{ item.title }}</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal -->
+<div
+  class="modal fade"
+  id="staticBackdrop"
+  data-bs-backdrop="static"
+  data-bs-keyboard="false"
+  tabindex="-1"
+  aria-labelledby="staticBackdropLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="album bg-light posts">
+        <div class="container p-0">
+          <div class="card shadow">
+            <div class="card-body d-flex justify-content-start px-2 py-0 pt-2">
+              <div class="w-auto px-1">
+                <img
+                  [src]="itemImageUrl"
+                  class="rounded-circle"
+                  alt="..."
+                  style="width: 45px; height: 45px; box-sizing: unset"
+                />
+              </div>
+              <p class="w-auto align-self-center h4 m-0 px-2 me-2">
+                {{ title }}
+              </p>
+            </div>
+
+            <img
+              class="card onlyImg m-2 shadow-sm"
+              [src]="itemImageUrl"
+              alt=""
+            />
+            <div class="card-body p-2">
+              <p
+                class="card-text m-0"
+                style="max-height: 80px; overflow: scroll"
+              >
+                <span class="fw-bold"></span>
+                {{ desc }}
+              </p>
+              <div class="d-flex align-items-center mt-2">
+                <button
+                  type="button"
+                  class="btn btn-outline-success flex-fill me-1"
+                  data-bs-dismiss="modal"
+                >
+                  Close Details
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
